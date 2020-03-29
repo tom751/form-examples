@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SimpleForm from './SimpleForm';
+import FormWithCustomInputs from './FormWithCustomInputs';
+import FormWithToggeableExtras from './FormWithToggeableExtras';
+import FormAcrossMultipleComponents from './FormComponents/FormAcrossMultipleComponents';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Simple form</h1>
+      <SimpleForm />
+      <h1>Form with custom components from external library</h1>
+      <FormWithCustomInputs />
+      <h1>Form with optional extra required fields</h1>
+      <FormWithToggeableExtras />
+      <h1>Form spread across multiple components</h1>
+      <FormAcrossMultipleComponents />
+      <h1>Wizard form</h1>
+      <a href="https://react-hook-form.com/advanced-usage#WizardFormFunnel">
+        https://react-hook-form.com/advanced-usage#WizardFormFunnel
+      </a>
+    </>
   );
 }
 
